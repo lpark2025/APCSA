@@ -1,0 +1,65 @@
+/*Author: Lauren and Pearly
+ * The name of this program is Spooky Project
+ * The point of this is to Trick or Treat 
+ * The goal is to not get any tricks
+ * 10.18.21
+ */
+import java.util.*;
+import java.util.Random;
+
+public class SpookyProject {
+	//ask person for amount of time they want to trick or treat
+	public static void main(String []args) {
+		Scanner in=new Scanner(System.in);
+		Random rand=new Random();
+		//Introduction 
+		System.out.println("Spooky Project (Enter to continue)");
+		String enter=in.nextLine();
+
+		System.out.println("Today is Oct 31st and you will go trick or treating!");
+		enter=in.nextLine();
+
+		System.out.println("The goal is to not get any tricks.");
+		enter=in.nextLine();
+
+		System.out.println("How many times do you want to trick or treat?");
+		int num=in.nextInt();
+
+		int num2=0;
+		int numoftreat=0;
+		int numoftrick=0;
+		//loop until you get a trick 
+		for(int i=0;i<num;i++) {
+
+			num2=(int)(Math.floor(Math.random()*(5-0+1)+0));
+
+			if(0<=num2&&num2<=4) {
+				//Treat
+				System.out.println("Treat!");
+				int candy=(int)(Math.floor(Math.random()*(3-1+1)+1));
+				numoftreat+=candy;
+				System.out.println("You got "+candy+" piece(s) of candy!");
+				System.out.println("You continue to trick or treat.");
+				System.out.println("");
+
+			}else {
+				//Trick
+				System.out.println("Trick! You stop Trick or Treating");
+				numoftrick++;
+
+				break;
+			}
+
+		}
+		//print results
+		System.out.println();
+		if(numoftrick==0) {
+			System.out.println("You win! You got no tricks and got "+numoftreat+" pieces of candy!");
+		}else {
+			System.out.println("You loose, you got a trick!");
+			System.out.println("You got "+numoftreat+" total");
+		}
+
+
+	}
+}
