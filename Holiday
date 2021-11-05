@@ -1,0 +1,55 @@
+/*Author Lauren and Brandon
+ * The name of this is Holiday
+ * This is a project for APCSA
+ */
+import java.util.*;
+public class Holiday {
+public static void main (String[]args){
+	Scanner in=new Scanner(System.in);
+	
+	String[] gifts=new String[5];
+	String enter="";
+	System.out.println("Christmas is coming soon and you want to send a list to Santa. Press Enter");
+	enter=in.nextLine();
+	System.out.println("What gifts would you like? Enter 5 things");
+	String item="";
+	for(int i=0;i<5;i++) {
+		System.out.println("Enter a gift");
+		item=in.nextLine();
+		gifts[i]=item;
+	}
+	//array gift list
+		//for loop
+	System.out.println("Since Santa is always watching, he knows how bad you have been");
+	int x = (int)(Math.floor(Math.random()*(5-0+1)+0));//problem
+	//parameter from 0 to 5
+			int num=0;
+			do {
+				if(0==0) {
+					if(x>=1) {
+						gifts[num]=" ";
+						num++;
+						x=x-1;
+					}
+					}
+				
+			}while(x>0);
+			
+			for(int i=0;i<5;i++) {
+				
+				if(gifts[i].contains(" ")){
+				System.out.println("You dont get this because you were bad");
+			}else {
+				System.out.println("You get a "+gifts[i]);
+			}
+				}
+			
+	//random number of bad things 
+		//if 
+		//do while
+	
+	
+	
+	
+}
+}
